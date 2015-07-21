@@ -4,13 +4,9 @@ In this assignment you will create some basic PHP functions and generate some si
 
 Notation: "Blah [foo|bar] blah" means that the this should either be "Blah foo blah" or "Blah bar blah" depending on context.
 
-Directory Structure
--------------------
-You should have the following directory structure:
+Create a new repository called assignment, and add the following php files to it.
 
-  - assignment4-part1
-    - src //Your files go in here
-    - log.txt //Work log file
+You do *NOT* need to submit *ANY* html code for testing purposes, only upload the php files according to the requirements listed below. Use the exact same variable names if specified anywhere.
 
 multtable.php
 -------------
@@ -41,28 +37,4 @@ If the user navigates away from the page and returns, the session should persist
 If a user tries to access either content1.php or content2.php without going through the login page at some previous point in time the user should should simply be redirected back to login.php. There are different ways to accomplish this. One might be to set a variable when a session is started the 'correct' way and check if that variable exists when loading the page.
 
 content1.php must have a link to content2.php that is displayed only after a user has logged in (this includes subsequent visits not from login.php). content2.php should have a link back to content1.php. Both content1.php and content2.php should require that a user at some point logged in to access them. Otherwise they should redirect back to login.php.
-
-Work Log
---------
-In order to be eligible to receive an A you must submit a work log. It will not contribute points directly to the assignment, but without it the maximum grade you will be eligible for is an 89%. The purpose is to allow me to tune the difficulty of assignments to ensure that you are getting the amount of practice needed without spending too much time on any given topic.
-
-The format is as follows:
-
-```
-Start: Wed, 7 Jan 2015 21:42:26 -0800
-End: Wed, 7 Jan 2015 22:42:26 -0800
-Tasks: During this period I drew a diagram of the classes I will be using to implement the message passing portion of the assignment.
-
-Start: Fri, 9 Jan 2015 18:00:00 -0800
-End: Fri, 9 Jan 2015 20:42:26 -0800
-Tasks: During this period I debugged for 1 hour to find a type and implement the send function of the cleint.
-```
-
-You can get most of this information from the git log if you run:
-`git log --pretty=format:"Start: %nEnd: %ad %nTasks: %s" --date=rfc`
-You just need to fill in the Start: time. Use the same date format. I would suggest copying and pasting the End time and just editing the time (or day if you went through midnight in a work session).
-
-Have one entry per work session.
-
-Put this log in log.txt.
 
