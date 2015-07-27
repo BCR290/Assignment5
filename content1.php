@@ -1,8 +1,16 @@
 <?php
 	session_start();
+	if($_SERVER['REQUEST_METHOD'] === 'POST') {
+		if (isset($_POST["userName"])) {
+			$_SESSION["user"] = $_POST["userName"];
+			$_SESSION["count"] = 1;
+		}
+	}
+
 	if (!isset($_SESSION["user"])) {
 		header("Location: http://web.engr.oregonstate.edu/~smithcr/assignment5/login.php");
 	}
+
 	$count = $_SESSION["count"]++;
 ?>
 <!DOCTYPE html>
